@@ -17,6 +17,6 @@ namespace UserRegistrationTest
             string name = "Pooja";
             bool result = program.FirstNameVal(name);
             Assert.AreEqual(true, result);
-       }
+        }
     }
 }
