@@ -39,6 +39,7 @@ namespace UserRegistrationTest
             bool result = program.MobileValidation(mobile);
             Assert.AreEqual(true, result);
         }
+
         [TestMethod]
         public void PasswordTest()
         {
