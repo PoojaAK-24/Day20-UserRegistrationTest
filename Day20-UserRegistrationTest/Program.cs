@@ -53,7 +53,7 @@ namespace Day20_UserRegistrationTest
         }
         public bool PasswordRule(string password)
         {
-            string PasswordPattern = "^[a-zA-Z0-9].{8,}$";
+            string PasswordPattern = "^([a-zA-Z0-9])*[!@#$%^&*]{1}([a-zA-Z0-9])*$";
             Regex rg = new Regex(PasswordPattern);
             bool validate = rg.IsMatch(password);
             return validate;
