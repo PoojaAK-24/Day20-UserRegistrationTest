@@ -26,6 +26,7 @@ namespace UserRegistrationTest
             bool result = program.LastNameVal(name);
             Assert.AreEqual(true, result);
         }
+
         [TestMethod]
         public void EmailTest()
         {
