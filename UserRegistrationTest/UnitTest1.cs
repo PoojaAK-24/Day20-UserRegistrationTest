@@ -11,6 +11,7 @@ namespace UserRegistrationTest
         {
             program = new Program();
         }
+
         [TestMethod]
         public void FirstNameTest()
         {
