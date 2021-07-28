@@ -7,7 +7,6 @@ namespace Day20_UserRegistrationTest
     {
         public static string REGEX_PATTERN = "^[A-Z]{1}[a-zA-Z]{2,}$";
         public static Program p = new Program();
-        
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome_To_UserRegistration_RegeEx");
@@ -17,9 +16,12 @@ namespace Day20_UserRegistrationTest
             Console.Write("Enter Last Name: ");
             string LastName = Console.ReadLine();
             Console.WriteLine(p.LastNameVal(LastName));
-            Console.Write("Enter E-mail : ");
+            Console.Write("Enter E-mail: ");
             string Email = Console.ReadLine();
             Console.WriteLine(p.EmailValidation(Email));
+            Console.Write("Enter Mobile_NO: ");
+            string mobile = Console.ReadLine();
+            Console.WriteLine(p.MobileValidation(mobile));
         }
         public bool FirstNameVal(string first_name)
         {
@@ -37,6 +39,13 @@ namespace Day20_UserRegistrationTest
             string EMAIL_PATTERN = "^[a-zA-Z0-9]+[.(a-zA-Z0-9)]*(\\@)[a-zA-Z0-9]+(\\.)[a-z]{2,3}[.(a-z)]*$";
             Regex rg = new Regex(EMAIL_PATTERN);
             bool validate = rg.IsMatch(email);
+            return validate;
+        }
+        public bool MobileValidation(string mobile)
+        {
+            string MobilePattern = "^(91){1}[ ]+[0-9]{10}$";
+            Regex rg = new Regex(MobilePattern);
+            bool validate = rg.IsMatch(mobile);
             return validate;
         }
     }
