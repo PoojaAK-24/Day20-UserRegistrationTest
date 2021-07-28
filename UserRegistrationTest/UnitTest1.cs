@@ -39,6 +39,7 @@ namespace UserRegistrationTest
             string mobile = "91 8880422433";
             bool result = program.MobileValidation(mobile);
             Assert.AreEqual(true, result);
+        
         }
     }
 }
