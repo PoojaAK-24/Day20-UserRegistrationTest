@@ -39,7 +39,7 @@ namespace Day20_UserRegistrationTest
         }
         public bool EmailValidation(string email)
         {
-            string EMAIL_PATTERN = "^[a-zA-Z0-9]+[.(a-zA-Z0-9)]*(\\@)[a-zA-Z0-9]+(\\.)[a-z]{2,3}[.(a-z)]*$";
+            string EMAIL_PATTERN = "^[A-Z0-9a-z]+([+-.#$^*][0-9]+)?[0-9]*[@][A-Za-z0-9]+[.][A-Za-z]{2,}([.][a-zA-Z]{2,})?$";
             Regex rg = new Regex(EMAIL_PATTERN);
             bool validate = rg.IsMatch(email);
             return validate;
